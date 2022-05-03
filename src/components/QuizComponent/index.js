@@ -11,23 +11,14 @@ export default function Quiz() {
   const pickAnswer = (e) => {
     let userAnswer = e.target.outerText;
 
-    if (quiz[number].answer === userAnswer) {
-      setPoints(points + 1);
-      const correctAnswer = document.querySelector("answer");
+    if (quiz[number].answer === userAnswer) setPoints(points + 1);
 
-      correctAnswer.addEventListener("click", function onClick(e) {
-        e.target.style.backgroundColor = "salmon";
-        e.target.style.color = "white";
-      });
-      setNumber(number + 1);
-    } else {
-      setNumber(number + 1);
-    }
+    setNumber(number + 1);
   };
 
   useEffect(() => {
     fetch(
-      "https://opentdb.com/api.php?amount=10&category=9&difficulty=hard&type=multiple"
+      "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple"
     )
       .then((response) => response.json())
       .then((data) =>
@@ -42,17 +33,17 @@ export default function Quiz() {
   }, []);
 
   return (
-    <div className="text-center pt-48">
+    <div className="flex flex-col h-full items-center justify-center text-center">
       {quiz[number] && (
         <div className="flex flex-col justify-items-center items-center">
           <div
-            className="w-[70%] margin-0 text-4xl mb-14"
+            className="w-[70%] margin-0 font-semibold text-2xl md:text-4xl mb-14"
             dangerouslySetInnerHTML={{ __html: quiz[number].question }}
           />
-          <div className="flex flex-col w-[40%] justify-center">
+          <div className="flex flex-col w-4/5 items-center">
             {quiz[number].options.map((item, index) => (
               <button
-                className="answer border-2 rounded-xl text-[#616a94] bg-[#161a31] select-none cursor-pointer mb-4"
+                className="answer border-2 rounded-xl text-[#616a94] bg-[#161a31] select-none cursor-pointer mb-4 w-[430px] py-7 hover:bg-[#22242e]"
                 key={index}
                 dangerouslySetInnerHTML={{ __html: item }}
                 onClick={pickAnswer}
