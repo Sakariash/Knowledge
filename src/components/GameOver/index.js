@@ -1,11 +1,16 @@
-export default function GameOver({ points }) {
+export default function GameOver({ points, text }) {
   const refreshPage = () => window.location.reload();
 
   return (
-    <>
-      <h1>Game Over</h1>
+    <div className="flex flex-col h-full items-center justify-center text-center">
+      <h1 className="text-6xl">Game Over</h1>
       <p>You got {points} points out of 10!</p>
-      <button onClick={refreshPage}>Play Again</button>
-    </>
+      <button
+        className="border-2 rounded-xl text-[#616a94] bg-[#161a31] select-none cursor-pointer mt-4 py-4 px-10 hover:bg-[#22242e]"
+        onClick={refreshPage}
+      >
+        Play Again
+      </button>
+    </div>
   );
 }
