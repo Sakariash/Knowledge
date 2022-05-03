@@ -3,7 +3,7 @@ import "./App.css";
 import Start from "./components/StartComponent";
 import Quiz from "./components/QuizComponent";
 
-function App() {
+export default function App() {
   const [start, setStart] = useState(false);
 
   return (
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
