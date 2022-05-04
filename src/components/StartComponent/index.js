@@ -8,7 +8,7 @@ const Start = ({ props }) => {
       <h1 className="text-3xl md:text-6xl font-bold">Knowledge is power</h1>
       <button
         onClick={startQuiz}
-        className="border-4 rounded-xl border-[#F79673] text-black bg-white  select-none cursor-pointer py-4 px-10 hover:bg-[#F79673] hover:text-white mt-8 font-bold"
+        className=" rounded-xl text-black bg-white  select-none cursor-pointer py-4 px-10 hover:bg-[#F79673] hover:text-white mt-8 font-bold"
       >
         Start Quiz
       </button>
