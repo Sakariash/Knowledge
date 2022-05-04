@@ -1,0 +1,15 @@
+.correct {
+  background: green;
+  hover: none;
+  border: none;
+}
+.correct:hover {
+  background: green;
+}
+
+.incorrect {
+}
+.incorrect:hover {
+  background: red;
+  border: none;
+}
