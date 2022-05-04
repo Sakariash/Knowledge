@@ -40,7 +40,7 @@ export default function Quiz() {
 
   useEffect(() => {
     fetch(
-      "https://opentdb.com/api.php?amount=15&category=9&difficulty=easy&type=multiple&token=a8f4669b8762793de4a71384d79b4ff1c83011e709cfbb0722afcf06d45952f4"
+      "https://opentdb.com/api.php?amount=15&category=9&difficulty=medium&type=multiple"
     )
       .then((response) => response.json())
       .then((data) =>
