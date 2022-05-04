@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background: #101427;
+  background: #3491f3;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -15,4 +15,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.quiz {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    15deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(89, 110, 235, 1) 0%,
+    rgba(51, 149, 242, 1) 52%
+  );
 }
